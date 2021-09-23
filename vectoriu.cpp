@@ -62,16 +62,19 @@ int main()
             }
             if(!df)
             {
+                sum -= p[n].egz;
+                p[n].nd.pop_back();
+                m--;
                 df.clear();
-                p[n].vid = sum/m;
+                p[n].vid = sum/(m);
                 sort(p[n].nd.begin(), p[n].nd.end());
                 if(m % 2 != 0)
                 {
-                   p[n].med = p[n].nd[(m/2)+1];
+                   p[n].med = p[n].nd[(m/2)];
                 }
-                else 
+                else
                 {
-                    p[n].med = (p[n].nd[(m/2)+1] + p[n].nd[(m/2)])/2;
+                    p[n].med = (p[n].nd[(m/2)] + p[n].nd[(m/2)-1])/2;
                 }
                 rf << fixed << setprecision(2) << setw(25) << p[n].vid*0.4 + p[n].egz*0.6 << fixed << setprecision(2) << setw(25) << p[n].med*0.4 + p[n].egz*0.6 << "\n";
             }
@@ -82,8 +85,6 @@ int main()
         df.close();
         rf.close();
     }
-    
-    
     else{
     yn = 'n';
     while(yn == 'n')
@@ -121,7 +122,7 @@ int main()
                 {
                     p[n].med = p[n].nd[(x/2)+1];
                 }
-                else 
+                else
                 {
                     p[n].med = (p[n].nd[(x/2)+1] + p[n].nd[(x/2)])/2;
                 }
