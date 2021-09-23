@@ -12,19 +12,30 @@ struct Studentas {
 
 int main()
 {
+    srand(time(NULL));
     int laik;
-    char yn = 'n';
+    char yn = 'n', arrand;
     int n = 0;
     float sum = 0;
     Studentas *p = new Studentas[100];
     while(yn == 'n')
     {
-        cout << "Ivesti varda ir pavarde \n";
+        cout << "Iveskite studento varda ir pavarde \n";
         cin >> p[n].vardas >> p[n].pavarde;
         for(int x = 0; x < 100; x++)
         {
-            cout << "Ivesti studento namu darbo " << x+1 << " pazymi (1-10), jeigu pazymiai baigesi iveskite 0 \n";
-            cin >> laik;
+            cout << "Jiegu norite sugeneruoti namu darbo pazymi, iveskite raide r, jeigu ivesite bet koki kita simboli pazymi galesite ivesti pats \n";
+            cin >> arrand;
+            if (arrand == 'r' || arrand == 'R')
+            {
+                laik = rand() % 10 + 1;
+            }
+            else
+            {
+                cout << "Ivesti studento namu darbo " << x+1 << " pazymi (1-10), jeigu pazymiai baigesi iveskite 0 \n";
+                cin >> laik;
+            }
+            arrand = 'a';
             sum += laik;
             while(laik < 0 || laik > 10 || !cin)
             {
@@ -49,8 +60,17 @@ int main()
                 break;
             }
         }
-        cout << "Iveskite egzamino rezultata (1-10) \n";
-        cin >> p[n].egz;
+        cout << "Jiegu norite sugeneruoti egzamino pazymi, iveskite raide r, jeigu ivesite bet koki kita simboli pazymi galesite ivesti pats \n";
+        cin >> arrand;
+        if (arrand == 'r' || arrand == 'R')
+        {
+            p[n].egz = rand() % 10 + 1;
+        }
+        else
+        {
+            cout << "Iveskite egzamino rezultata (1-10) \n";
+            cin >> p[n].egz;
+        }
         while(p[n].egz < 0 || p[n].egz > 10 || !cin)
         {
             cin.clear();
