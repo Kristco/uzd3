@@ -15,9 +15,77 @@ int main()
     srand(time(NULL));
     int laik;
     char yn = 'n', arrand;
-    int n = 0;
+    int n = 0, m = 0, a;
     float sum = 0;
-    Studentas *p = new Studentas[100];
+    Studentas *p = new Studentas[2000000];
+    cout << "Jeigu norite skaityti is failo iveskite f, bet koks kitas simbolis leis ivedineti ranka duomenis \n";
+    cin >> yn;
+    if(yn == 'f' || yn == 'F')
+    {
+        ofstream rf ("output.txt");
+        rf << setw(18) << left << "Vardas" << setw(18)  << left << "Pavarde" << setw(25) << left << "Galutinis (vidurkis)" << setw(25) << left << "Galutinis (mediana)" << "\n";
+        rf << "--------------------------------------------------------------------------------" << "\n";
+        cout << "Iveskite 1, 2 arba 3, jeigu norite nuskaityti 10 000, 100 000 arba 1 000 000, dydzio failus atitinkamai \n";
+        cin >> a;
+        while(a < 1 || a > 3 || !cin)
+        {
+            cin.clear();
+            cin.ignore();
+            cout << "Kazka neteisingai ivedete, iveskite dar karta \n";
+            cin >> a;
+        }
+        string fail;
+        if(a == 1)
+        {
+            fail = "Studentai10000.txt";
+        }
+        else if (a == 2)
+        {
+            fail = "Studentai100000.txt";
+        }
+        else
+        {
+            fail = "Studentai1000000.txt";
+        }
+        ifstream df (fail);
+        df.ignore(65536,'\n');
+        while(!cin.eof())
+        {
+            df >> p[n].vardas >> p[n].pavarde;
+            rf << setw(18) << p[n].vardas << setw(18) << p[n].pavarde;
+            while(df >> laik)
+            {
+                p[n].nd.push_back(laik);
+                sum += laik;
+                p[n].egz = laik;
+                m++;
+            }
+            if(!df)
+            {
+                df.clear();
+                p[n].vid = sum/m;
+                sort(p[n].nd.begin(), p[n].nd.end());
+                if(m % 2 != 0)
+                {
+                   p[n].med = p[n].nd[(m/2)+1];
+                }
+                else 
+                {
+                    p[n].med = (p[n].nd[(m/2)+1] + p[n].nd[(m/2)])/2;
+                }
+                rf << fixed << setprecision(2) << setw(25) << p[n].vid*0.4 + p[n].egz*0.6 << fixed << setprecision(2) << setw(25) << p[n].med*0.4 + p[n].egz*0.6 << "\n";
+            }
+            sum = 0;
+            n++;
+            m = 0;
+        }
+        df.close();
+        rf.close();
+    }
+    
+    
+    else{
+    yn = 'n';
     while(yn == 'n')
     {
         cout << "Iveskite studento varda ir pavarde \n";
@@ -100,5 +168,6 @@ int main()
             cout << fixed << setprecision(2) << setw(5) << p[x].vid*0.4 + p[x].egz*0.6 << "\n";
     }
     delete[] p;
+    }
     return 0;
 }
