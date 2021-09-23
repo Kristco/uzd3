@@ -4,7 +4,7 @@ using namespace std;
 
 struct Studentas {
     string vardas, pavarde;
-    int nd[100];
+    double nd[100];
     int egz;
     float vid;
     float med;
