@@ -12,18 +12,29 @@ struct Studentas {
 
 int main()
 {
-    char yn = 'n';
+    srand(time(NULL));
+    char yn = 'n', arrand;
     int n = 0;
     float sum = 0;
     Studentas *p = new Studentas[100];
     while(yn == 'n')
     {
-        cout << "Ivesti varda ir pavarde \n";
+        cout << "Iveskite studento varda ir pavarde \n";
         cin >> p[n].vardas >> p[n].pavarde;
         for(int x = 0; x < 100; x++)
         {
-            cout << "Ivesti studento namu darbo " << x+1 << " pazymi (1-10), jeigu pazymiai baigesi iveskite 0 \n";
-            cin >> p[n].nd[x];
+            cout << "Jeigu norite sugeneruoti namu darbo pazymi, iveskite raide r, jeigu ivesite bet koki kita simboli pazymi galesite ivesti pats \n";
+            cin >> arrand;
+            if (arrand == 'r' || arrand == 'R')
+            {
+                p[n].nd[x] = rand() % 10 + 1;
+                cout << p[n].nd[x] << "\n";
+            }
+            else
+            {
+                cout << "Ivesti studento namu darbo " << x+1 << " pazymi (1-10), jeigu pazymiai baigesi iveskite 0 \n";
+                cin >> p[n].nd[x];
+            }
             while(p[n].nd[x] < 0 || p[n].nd[x] > 10 || !cin)
             {
                 cin.clear();
@@ -31,6 +42,7 @@ int main()
                 cout << "Kazka neteisingai suvedete, bandykite dar karta \n";
                 cin >> p[n].nd[x];
             }
+            arrand = 'a';
             sum += p[n].nd[x];
             if (p[n].nd[x] == 0)
             {
@@ -47,8 +59,17 @@ int main()
                 break;
             }
         }
-        cout << "Iveskite egzamino rezultata (1-10) \n";
-        cin >> p[n].egz;
+        cout << "Jeigu norite sugeneruoti egzamino pazymi, iveskite raide r, jeigu ivesite bet koki kita simboli pazymi galesite ivesti pats \n";
+        cin >> arrand;
+        if (arrand == 'r' || arrand == 'R')
+        {
+            p[n].egz = rand() % 10 + 1;
+        }
+        else
+        {
+            cout << "Iveskite egzamino rezultata (1-10) \n";
+            cin >> p[n].egz;
+        }
         while(p[n].egz < 0 || p[n].egz > 10 || !cin)
         {
             cin.clear();
@@ -79,3 +100,4 @@ int main()
     }
     delete[] p;
     return 0;
+}
