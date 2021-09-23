@@ -24,7 +24,7 @@ int main()
         cin >> p[n].vardas >> p[n].pavarde;
         for(int x = 0; x < 100; x++)
         {
-            cout << "Jiegu norite sugeneruoti namu darbo pazymi, iveskite raide r, jeigu ivesite bet koki kita simboli pazymi galesite ivesti pats \n";
+            cout << "Jeigu norite sugeneruoti namu darbo pazymi, iveskite raide r, jeigu ivesite bet koki kita simboli pazymi galesite ivesti pats \n";
             cin >> arrand;
             if (arrand == 'r' || arrand == 'R')
             {
@@ -60,7 +60,7 @@ int main()
                 break;
             }
         }
-        cout << "Jiegu norite sugeneruoti egzamino pazymi, iveskite raide r, jeigu ivesite bet koki kita simboli pazymi galesite ivesti pats \n";
+        cout << "Jeigu norite sugeneruoti egzamino pazymi, iveskite raide r, jeigu ivesite bet koki kita simboli pazymi galesite ivesti pats \n";
         cin >> arrand;
         if (arrand == 'r' || arrand == 'R')
         {
