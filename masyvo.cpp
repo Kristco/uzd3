@@ -28,7 +28,6 @@ int main()
             if (arrand == 'r' || arrand == 'R')
             {
                 p[n].nd[x] = rand() % 10 + 1;
-                cout << p[n].nd[x] << "\n";
             }
             else
             {
