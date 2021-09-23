@@ -4,8 +4,8 @@ using namespace std;
 
 struct Studentas {
     string vardas, pavarde;
-    vector <int> nd;
-    int egz;
+    vector <double> nd;
+    float egz;
     float vid;
     float med;
 };
@@ -29,15 +29,10 @@ int main()
             {
                 p[n].vid = sum/x;
                 sort(p[n].nd.begin(), p[n].nd.end());
-                for(int y = 0; y < x; y++)
-                {
-                    cout << p[n].nd.back() << "\n";
-                    p[n].nd.pop_back();
-                }
                 if(x % 2 != 0)
                     p[n].med = p[n].nd[x/2];
                 else
-                    p[n].med = (p[n].nd[x/2] + p[n].nd[(x/2)-1])/2;
+                    p[n].med = (p[n].nd[x/2] + p[n].nd[(x/2)+1])/2;
                 break;
             }
         }
