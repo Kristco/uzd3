@@ -28,9 +28,13 @@ int main()
                 p[n].vid = sum/x;
                 sort(p[n].nd, p[n].nd+x);
                 if(x % 2 != 0)
+                {
                     p[n].med = p[n].nd[x/2];
+                }
                 else
+                {
                     p[n].med = (p[n].nd[x/2] + p[n].nd[(x/2)-1])/2;
+                }
                 break;
             }
         }
