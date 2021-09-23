@@ -15,13 +15,22 @@ int main()
     char yn = 'n';
     int n = 0;
     float sum = 0;
-    Studentas *p = new Studentas[10];
+    Studentas *p = new Studentas[100];
     while(yn == 'n')
     {
+        cout << "Ivesti varda ir pavarde \n";
         cin >> p[n].vardas >> p[n].pavarde;
-        for(int x = 0; x < 10; x++)
+        for(int x = 0; x < 100; x++)
         {
+            cout << "Ivesti studento namu darbo " << x+1 << " pazymi (1-10), jeigu pazymiai baigesi iveskite 0 \n";
             cin >> p[n].nd[x];
+            while(p[n].nd[x] < 0 || p[n].nd[x] > 10 || !cin)
+            {
+                cin.clear();
+                cin.ignore();
+                cout << "Kazka neteisingai suvedete, bandykite dar karta \n";
+                cin >> p[n].nd[x];
+            }
             sum += p[n].nd[x];
             if (p[n].nd[x] == 0)
             {
@@ -38,18 +47,26 @@ int main()
                 break;
             }
         }
+        cout << "Iveskite egzamino rezultata (1-10) \n";
         cin >> p[n].egz;
-        cout << "ar baigesi studentai?  y/n" << "\n";
+        while(p[n].egz < 0 || p[n].egz > 10 || !cin)
+        {
+            cin.clear();
+            cin.ignore();
+            cout << "Kazka neteisingai suvedete, bandykite dar karta \n";
+            cin >> p[n].egz;
+        }
+        cout << "Jei studenai baigesi irasykite, bet koki simboli, jei ne rasykite n" << "\n";
         cin >> yn;
         sum = 0;
         n++;
     }
-    cout << "Galutiniai pazymiai su vidurkiu ar mediana? v/m";
-    cin >> yn; cout << "\n";
+    cout << "Jeigu norite galutinio pazymio su mediana, rasykite m/M, jeigu vidurkio, bet koki kita simboli \n";
+    cin >> yn;
     cout << setw(15) << left << "Vardas" << setw(15)  << left << "Pavarde";
-    if (yn == 'm') 
+    if (yn == 'm' || yn == 'M')
         cout << setw(5) << "Galutinis (mediana)" << "\n";
-    else 
+    else
         cout << setw(5) << "Galutinis (vidurkis)" << "\n";
     cout << "-------------------------------------------------------------" << "\n";
     for(int x = 0; x < n; x++)
@@ -62,4 +79,3 @@ int main()
     }
     delete[] p;
     return 0;
-}
