@@ -10,11 +10,11 @@ Jums reikės:
   * Tą patį padaryti su egzamino rezultatu.
   * Įvesti ar bus dar studentų.
   * Pasirinkti ar norite, kad galutinis pažymis būtų skaičiuojamas su vidurkiu arba mediana.
-Kai viską suvesite išvestis atrodys:
 
-Vardas      Pavarde         Galutinis (vidurkis) / Galutinis (mediana)
-----------------------------------------------------------------------
-Vardas1     Pavarde2        6.60
+Išvestis atrodo taip
+
+![image](https://user-images.githubusercontent.com/69794082/134679210-7fb8046a-cce2-4850-8476-fc8f7e4c4ed8.png)
+
 
 Komentarai:
 Pirmos užduoties pirma versija pabaigta. Deja nenaudojau kol kas funkcijų ir viskas yra surašyta main, tačiau abi programos veikia kaip turėtų ir atlieka savo funkcijas, kurios buvo prašomos. Užtrukau ilgiau negu tikėjausi, kitą kartą reikės pasilikti daugiau laiko tokioms užduotims
