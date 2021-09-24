@@ -11,7 +11,7 @@ Jums reikės:
   * Įvesti ar bus dar studentų.
   * Pasirinkti ar norite, kad galutinis pažymis būtų skaičiuojamas su vidurkiu arba mediana.
 
-Išvestis atrodo taip
+Išvestis atrodo taip:
 
 ![image](https://user-images.githubusercontent.com/69794082/134679210-7fb8046a-cce2-4850-8476-fc8f7e4c4ed8.png)
 
