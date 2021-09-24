@@ -5,21 +5,20 @@ using namespace std;
 struct Studentas {
     string vardas, pavarde;
     vector <double> nd;
-    float egz;
-    float vid;
-    float med;
+    double egz;
+    double vid;
+    double med;
 };
 
 int main()
 {
-    srand(time(NULL));
     int laik;
-    char yn = 'n', arrand;
-    int n = 0, m = 0, a;
-    float sum = 0;
-    Studentas *p = new Studentas[2000000];
+    char yn = 'n';
+    long int n = 0, m = 0, a;
+    double sum = 0;
     cout << "Jeigu norite skaityti is failo iveskite f, bet koks kitas simbolis leis ivedineti ranka duomenis \n";
     cin >> yn;
+    Studentas *p = new Studentas[2000000];
     if(yn == 'f' || yn == 'F')
     {
         ofstream rf ("output.txt");
@@ -47,9 +46,9 @@ int main()
         {
             fail = "Studentai1000000.txt";
         }
-        ifstream df (fail);
+        ifstream df(fail);
         df.ignore(65536,'\n');
-        while(!cin.eof())
+        while(df.peek() != EOF)
         {
             df >> p[n].vardas >> p[n].pavarde;
             rf << setw(18) << p[n].vardas << setw(18) << p[n].pavarde;
@@ -84,8 +83,12 @@ int main()
         }
         df.close();
         rf.close();
+        delete[] p;
+        return 0;
     }
     else{
+    srand(time(NULL));
+    char arrand;
     yn = 'n';
     while(yn == 'n')
     {
