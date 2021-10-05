@@ -17,11 +17,12 @@ int main()
     char yn = 'n', arrand;
     int n = 0;
     float sum = 0;
-    Studentas *p = new Studentas[100];
+    vector <Studentas> stu;
     while(yn == 'n')
     {
+        stu.resize(stu.size()+ 1);
         cout << "Iveskite studento varda ir pavarde \n";
-        cin >> p[n].vardas >> p[n].pavarde;
+        cin >> stu[n].vardas >> stu[n].pavarde;
         for(int x = 0; x < 100; x++)
         {
             cout << "Jeigu norite sugeneruoti namu darbo pazymi, iveskite raide r, jeigu ivesite bet koki kita simboli pazymi galesite ivesti pats \n";
@@ -44,18 +45,18 @@ int main()
                 cout << "Kazka neteisingai suvedete, bandykite dar karta \n";
                 cin >> laik;
             }
-            p[n].nd.push_back(laik);
+            stu[n].nd.push_back(laik);
             if (laik == 0)
             {
-                p[n].vid = sum/x;
-                sort(p[n].nd.begin(), p[n].nd.end());
+                stu[n].vid = sum/x;
+                sort(stu[n].nd.begin(), stu[n].nd.end());
                 if(x % 2 != 0)
                 {
-                    p[n].med = p[n].nd[(x/2)+1];
+                    stu[n].med = stu[n].nd[(x/2)+1];
                 }
                 else 
                 {
-                    p[n].med = (p[n].nd[(x/2)+1] + p[n].nd[(x/2)])/2;
+                    stu[n].med = (stu[n].nd[(x/2)+1] + stu[n].nd[(x/2)])/2;
                 }
                 break;
             }
@@ -64,19 +65,19 @@ int main()
         cin >> arrand;
         if (arrand == 'r' || arrand == 'R')
         {
-            p[n].egz = rand() % 10 + 1;
+            stu[n].egz = rand() % 10 + 1;
         }
         else
         {
             cout << "Iveskite egzamino rezultata (1-10) \n";
-            cin >> p[n].egz;
+            cin >> stu[n].egz;
         }
-        while(p[n].egz < 0 || p[n].egz > 10 || !cin)
+        while(stu[n].egz < 0 || stu[n].egz > 10 || !cin)
         {
             cin.clear();
             cin.ignore();
             cout << "Kazka neteisingai suvedete, bandykite dar karta \n";
-            cin >> p[n].egz;
+            cin >> stu[n].egz;
         }
         cout << "Jei studenai baigesi irasykite, bet koki simboli, jei ne rasykite n" << "\n";
         cin >> yn;
@@ -93,12 +94,11 @@ int main()
     cout << "-------------------------------------------------------------" << "\n";
     for(int x = 0; x < n; x++)
     {
-        cout << setw(15) << p[x].vardas << setw(15) << p[x].pavarde;
+        cout << setw(15) << stu[x].vardas << setw(15) << stu[x].pavarde;
         if(yn == 'm')
-            cout << fixed << setprecision(2) << setw(5) << p[x].med*0.4 + p[x].egz*0.6 << "\n";
+            cout << fixed << setprecision(2) << setw(5) << stu[x].med*0.4 + stu[x].egz*0.6 << "\n";
         else
-            cout << fixed << setprecision(2) << setw(5) << p[x].vid*0.4 + p[x].egz*0.6 << "\n";
+            cout << fixed << setprecision(2) << setw(5) << stu[x].vid*0.4 + stu[x].egz*0.6 << "\n";
     }
-    delete[] p;
     return 0;
 }
