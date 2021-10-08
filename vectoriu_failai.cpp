@@ -6,7 +6,7 @@ struct Studentas {
     string vardas, pavarde;
     vector <double> nd;
     double egz;
-    double vid;
+    double vid; 
     double med;
 };
 
@@ -47,29 +47,29 @@ int main()
         while(df.peek() != EOF)
         {
             p.resize(p.size()+ 1);
-            df >> p[n].vardas >> p[n].pavarde;
+            df >> p.at(n).vardas >> p.at(n).pavarde;
             while(df >> laik)
             {
-                p[n].nd.push_back(laik);
+                p.at(n).nd.push_back(laik);
                 sum += laik;
-                p[n].egz = laik;
+                p.at(n).egz = laik;
                 m++;
             }
             if(!df)
             {
-                sum -= p[n].egz;
-                p[n].nd.pop_back();
+                sum -= p.at(n).egz;
+                p.at(n).nd.pop_back();
                 m--;
                 df.clear();
-                p[n].vid = sum/(m);
-                sort(p[n].nd.begin(), p[n].nd.end());
+                p.at(n).vid = sum/(m);
+                sort(p.at(n).nd.begin(), p.at(n).nd.end());
                 if(m % 2 != 0)
                 {
-                   p[n].med = p[n].nd[(m/2)];
+                   p.at(n).med = p.at(n).nd[(m/2)];
                 }
                 else
                 {
-                    p[n].med = (p[n].nd[(m/2)] + p[n].nd[(m/2)-1])/2;
+                    p.at(n).med = (p.at(n).nd[(m/2)] + p.at(n).nd[(m/2)-1])/2;
                 }
                 m = 0;
             }
@@ -79,7 +79,6 @@ int main()
         sort(p.begin(), p.end(), palyginimas);
         for(int x = 0; x < n; x++)
         {
-            
             cout << setw(18) << p[x].vardas << setw(18) << p[x].pavarde;
             cout << fixed << setprecision(2) << setw(25) << p[x].vid*0.4 + p[x].egz*0.6 << fixed << setprecision(2) << setw(25) << p[x].med*0.4 + p[x].egz*0.6 << "\n";
         }
@@ -93,7 +92,7 @@ int main()
     while(yn == 'n')
     {
         p.resize(p.size()+ 1);
-        cout << "Iveskite studento varda ir pavarde \n"; cin >> p[n].vardas >> p[n].pavarde;
+        cout << "Iveskite studento varda ir pavarde \n"; cin >> p.at(n).vardas >> p.at(n).pavarde;
         for(int x = 0; x < 100; x++)
         {
             cout << "Jeigu norite sugeneruoti namu darbo pazymi, iveskite raide r, jeigu ivesite bet koki kita simboli pazymi galesite ivesti pats \n"; cin >> arrand;
@@ -112,18 +111,18 @@ int main()
                 cin.ignore();
                 cout << "Kazka neteisingai suvedete, bandykite dar karta \n"; cin >> laik;
             }
-            p[n].nd.push_back(laik);
+            p.at(n).nd.push_back(laik);
             if (laik == 0)
             {
-                p[n].vid = sum/x;
-                sort(p[n].nd.begin(), p[n].nd.end());
+                p.at(n).vid = sum/x;
+                sort(p.at(n).nd.begin(), p.at(n).nd.end());
                 if(x % 2 != 0)
                 {
-                    p[n].med = p[n].nd[(x/2)+1];
+                    p.at(n).med = p.at(n).nd[(x/2)+1];
                 }
                 else
                 {
-                    p[n].med = (p[n].nd[(x/2)+1] + p[n].nd[(x/2)])/2;
+                    p.at(n).med = (p.at(n).nd[(x/2)+1] + p.at(n).nd[(x/2)])/2;
                 }
                 break;
             }
@@ -137,11 +136,11 @@ int main()
         {
             cin.clear();
             cin.ignore();
-            cout << "Iveskite egzamino rezultata (1-10) \n"; cin >> p[n].egz;
+            cout << "Iveskite egzamino rezultata (1-10) \n"; cin >> p.at(n).egz;
         }
-        while(p[n].egz < 0 || p[n].egz > 10 || !cin)
+        while(p.at(n).egz < 0 || p.at(n).egz > 10 || !cin)
         {
-            cout << "Kazka neteisingai suvedete, bandykite dar karta \n"; cin >> p[n].egz;
+            cout << "Kazka neteisingai suvedete, bandykite dar karta \n"; cin >> p.at(n).egz;
         }
         cout << "Jei studenai baigesi irasykite, bet koki simboli, jei ne rasykite n" << "\n"; cin >> yn;
         sum = 0; n++;
