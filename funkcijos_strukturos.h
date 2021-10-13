@@ -1,7 +1,3 @@
-//
-// Created by Kri on 10/13/2021.
-//
-
 #ifndef UZD1_FUNKCIJOS_STRUKTUROS_H
 #define UZD1_FUNKCIJOS_STRUKTUROS_H
 
