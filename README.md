@@ -16,4 +16,4 @@ Išvestis atrodo taip (Pirmas skaičius vidurkis, antras - mediana):
 Programa patobulinta, kad naudotų header file savo funkcijoms ir struktūroms, o pačiame pagrindiniame failę liktų tik main.
 
 Komentarai:
-Pirmos užduoties antra versija pabaigta. Vis dar nenaudojau funkcijų ir viskas yra surašyta main, tačiau programa veikia kaip turėtų ir atlieka savo funkcijas, kurios buvo prašomos. Nebuvo per daug sunku patobulinti po v0.1, tačiau susiduriau su porą problemų, kai bandžiau, kad baigtų nuskaitinėti ant failo galo, daug klaidų mesdavo.
+Nebuvo susidurta su rimtomis problemomis iki užduoties pabaigimo, tačiau užtruko persirašyti visas funkcijas
