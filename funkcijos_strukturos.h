@@ -39,8 +39,11 @@ void failo_nuskaitymas(vector<Studentas>& p, int& n){
     else if (laik == 2) failas = "Studentai100000.txt";
     else failas = "Studentai1000000.txt";
     ifstream df(failas);
-    if(df.fail())
-    {
+    try {
+        ifstream df(failas);
+        df.exceptions(ifstream::failbit | ifstream::badbit);
+    }
+    catch (exception){
         cout << "Failas neegzistuoja arba blogai uzvadintas \n";
         abort();
     }
