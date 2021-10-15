@@ -8,4 +8,4 @@ Išvestis atrodo taip:
 
 
 Komentarai:
-Nebuvo susidurta su rimtomis problemomis iki užduoties pabaigimo, tačiau užtruko persirašyti visas funkcijas
+Funkcijas tik reikėjo truputi pakeisti nuo praeitų užduoties versijų, todėl nebuvo labai sudėtinga, tačiau susidrūriau su sunkumais kai reikėjo padalinti į 2 skirtingas grupes, nes norėjau padaryti su lower_bound(), nesigavo, todėl padariau paprastą loop, kuriame yra suskirstoma į grupes.
