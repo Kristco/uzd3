@@ -2,13 +2,13 @@
 #include "duomenu_apdorojimas.h"
 #include "skaiciavimai.h"
 
-void rusiavimas(vector<Studentas> p, vector<Studentas>& lam, vector<Studentas>& fal, int kiekis, vector<double>& laikas)
+void rusiavimas(list<Studentas> p, list<Studentas>& lam, list<Studentas>& fal, vector<double>& laikas)
 {
     auto start = system_clock::now();
-    for(int y = 1; y <= kiekis; y++)
+    for(auto iter : p)
     {
-        if (p.at(y).galut < 5)  fal.push_back(p.at(y));
-        else    lam.push_back(p.at(y));
+        if (iter.galut < 5)  fal.push_back(iter);
+        else    lam.push_back(iter);
     }
     auto end  = system_clock::now();
     duration<double> diff = end - start;

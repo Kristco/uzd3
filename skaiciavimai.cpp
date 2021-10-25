@@ -9,8 +9,8 @@ int gen () {
     return dist(mersenne_engine);
 }
 
-void vidurkis_galut(vector<Studentas>& p, int nd_sk, int studento_sk){
+void vidurkis_galut(list<Studentas>& p){
     double suma = 0;
-    p.at(studento_sk).vid = accumulate(p.at(studento_sk).nd.begin(), p.at(studento_sk).nd.end(), suma) / nd_sk;
-    p.at(studento_sk).galut = p.at(studento_sk).vid * 0.4 + p.at(studento_sk).egz * 0.6;
+    p.back().vid = accumulate(p.back().nd.begin(), p.back().nd.end(), suma) / p.back().nd.size();
+    p.back().galut = p.back().vid * 0.4 + p.back().egz * 0.6;
 }
