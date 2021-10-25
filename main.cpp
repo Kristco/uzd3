@@ -1,4 +1,7 @@
-#include "Funkcijos_Strukturos.h"
+#include "strukturos.h"
+#include "duomenu_apdorojimas.h"
+#include "failu_tvarkymas.h"
+
 
 int main()
 {
