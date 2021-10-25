@@ -1,5 +1,5 @@
-#include <bits/stdc++.h>
-#include "funkcijos_strukturos.h"
+#include "strukturos.h"
+#include "duomenu_operacijos.h"
 
 using namespace std;
 
