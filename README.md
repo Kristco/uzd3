@@ -4,7 +4,7 @@
 
 Išvestis atrodo taip:
 
-![image](https://user-images.githubusercontent.com/69794082/137543255-75207caf-ec00-42f6-9acf-9ec45bb9abae.png)
+![image](https://user-images.githubusercontent.com/69794082/139396566-42832e63-3827-4b89-8d11-ed6de7b3c0e2.png)
 
 Sistemos parametrai: 
 - CPU - 6 Core, 12 Threads, Base clock speed 2,9Ghz
