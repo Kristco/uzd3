@@ -13,18 +13,18 @@ Sistemos parametrai:
 
 Programos buvo bandomos 5 kartus
 Rezultatų vidurkis su **std::vector**:
-- 1000        0,0286sec;
-- 10000       0,0787sec;
-- 100000      0,584sec;
-- 1000000     5,804sec;
-- 10000000    62,89sec.
+- 1000 -- 0,0286sec;
+- 10000 --  0,0787sec;
+- 100000 -- 0,584sec;
+- 1000000 -- 5,804sec;
+- 10000000 -- 62,89sec.
 
 Rezultatų vidurkis su **std::list**:
-- 1000       0,0148sec; (-48%)
-- 10000      0,0662sec; (-16%)
-- 100000     0,565sec;  (-3%)
-- 1000000    5,579sec;  (-4%)
-- 10000000   56,71sec.  (-10%)
+- 1000 -- 0,0148sec; (-48%)
+- 10000 -- 0,0662sec; (-16%)
+- 100000 -- 0,565sec;  (-3%)
+- 1000000 -- 5,579sec;  (-4%)
+- 10000000 -- 56,71sec.  (-10%)
 - 
 Vidutiniškai 16% pokytis palyginus su **std::vector**
 
