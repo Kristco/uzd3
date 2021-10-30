@@ -25,6 +25,7 @@ Rezultatų vidurkis su **std::list**:
 - 100000 -- 0,565sec;  (-3%)
 - 1000000 -- 5,579sec;  (-4%)
 - 10000000 -- 56,71sec.  (-10%)
+
 Vidutiniškai 16% pokytis palyginus su **std::vector**
 
 Komentarai:
