@@ -28,5 +28,6 @@ Rezultatų vidurkis su **std::list**:
 
 Vidutiniškai 16% pokytis palyginus su **std::vector**
 
+
 Komentarai:
 Kodas beveik nesiskiria nuo 0.4, tik visur vector buvo pakeisti į list.
