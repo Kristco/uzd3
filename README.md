@@ -11,7 +11,7 @@ Sistemos parametrai:
 - RAM - 16GB 2666Mhz
 - SSD - Read/Write 3500/3000 MB/s
 
-Programos buvo bandomos 5 kartus
+Programos buvo bandomos po 5 kartus.
 Rezultatų vidurkis su **std::vector**:
 - 1000 -- 0,0286sec;
 - 10000 --  0,0787sec;
