@@ -31,4 +31,4 @@ Vidutiniškai programam 13% veikia grečiau negu su **std::vector**
 
 
 Komentarai:
-Kodas beveik nesiskiria nuo 0.4, tik visur kur buvo vector pakeičiau į list ir naudojau iteratorius.
+Kodas beveik nesiskiria nuo 0.4, tik visur kur buvo vector pakeičiau į list ir naudojau iteratorius. Jaučiu reiktų dar truputi optimizuoti, kad nebūtų vector greičiau prie 100 000 ir 1 000 000 sąrašo
