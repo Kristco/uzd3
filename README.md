@@ -15,20 +15,20 @@ Programos buvo bandomos po 5 kartus
 
 Rezultatų vidurkis su **std::vector**:
 - 1000 -- 0,0286sec;
-- 10000 --  0,0787sec;
+- 10000 -- 0,0787sec;
 - 100000 -- 0,584sec;
 - 1000000 -- 5,804sec;
 - 10000000 -- 62,89sec.
 
 Rezultatų vidurkis su **std::list**:
-- 1000 -- 0,0148sec; (-48%)
-- 10000 -- 0,0662sec; (-16%)
-- 100000 -- 0,565sec;  (-3%)
-- 1000000 -- 5,579sec;  (-4%)
-- 10000000 -- 56,71sec.  (-10%)
+- 1000 -- 0,0121sec; (-58%)
+- 10000 -- 0,0674sec; (-14%)
+- 100000 -- 0,622sec;  (+7%)
+- 1000000 -- 6,052sec;  (+4%)
+- 10000000 -- 59,76sec.  (-5%)
 
-Vidutiniškai 16% pokytis palyginus su **std::vector**
+Vidutiniškai programam 13% veikia grečiau negu su **std::vector**
 
 
 Komentarai:
-Kodas beveik nesiskiria nuo 0.4, tik visur vector buvo pakeisti į list.
+Kodas beveik nesiskiria nuo 0.4, tik visur kur buvo vector pakeičiau į list ir naudojau iteratorius.
