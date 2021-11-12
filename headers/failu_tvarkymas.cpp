@@ -8,15 +8,16 @@ void failo_nuskaitymas(list<Studentas>& p, int n, vector<double>& laikas){
     auto start = system_clock::now();
     ifstream df(failas);
     df.ignore(65536,'\n');
-    p.resize(n+1);
-    for(auto iter : p) {
-        p.back().nd.resize(7);
-        df >> p.back().vardas >> p.back().pavarde;
+    for(int x = 0; x < n; x++) {
+        Studentas pone;
+        pone.nd.resize(7);
+        df >> pone.vardas >> pone.pavarde;
         for (int y = 0; y < 7; y++) {
-            df >> p.back().nd.at(y);
+            df >> pone.nd.at(y);
         }
-        df >> p.back().egz;
-        vidurkis_galut(p);
+        df >> pone.egz;
+        vidurkis_galut(pone);
+        p.push_back(pone);
     }
     df.close();
     auto end  = system_clock::now();

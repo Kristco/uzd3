@@ -7,8 +7,14 @@ void rusiavimas(list<Studentas> p, list<Studentas>& lam, list<Studentas>& fal, v
     auto start = system_clock::now();
     for(auto iter : p)
     {
-        if (iter.galut < 5)  fal.push_back(iter);
-        else    lam.push_back(iter);
+        if (iter.galut < 5)
+        {
+            fal.push_back(iter);
+        }
+        else
+        {
+            lam.push_back(iter);
+        }
     }
     auto end  = system_clock::now();
     duration<double> diff = end - start;
