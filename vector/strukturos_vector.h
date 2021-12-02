@@ -2,6 +2,7 @@
 #define UZD1_STRUKTUROS_VECTOR_H
 
 #include <bits/stdc++.h>
+
 using namespace std;
 using namespace chrono;
 

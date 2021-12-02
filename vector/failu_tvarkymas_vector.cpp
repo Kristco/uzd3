@@ -25,8 +25,8 @@ void failo_nuskaitymas_vector(vector<Studentas_V>& p, int n, vector<double>& lai
 }
 
 void isvedimas_failas_vector(vector<Studentas_V> lam, vector<Studentas_V> fal, int n, vector<double>& laikas){
-    ofstream lf("Laimetojai" + to_string(n) + ".txt");
-    ofstream ff("Luzeriai" + to_string(n) + ".txt");
+    ofstream lf("LaimetojaiV1" + to_string(n) + ".txt");
+    ofstream ff("LuzeriaiV1" + to_string(n) + ".txt");
     auto start = system_clock::now();
     lf << setw(18) << left << "Vardas" << setw(18)  << left << "Pavarde" << setw(25) << left << "Galutinis (vidurkis)" << "\n";
     lf << "--------------------------------------------------------" << "\n";

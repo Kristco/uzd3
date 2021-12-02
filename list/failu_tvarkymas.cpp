@@ -26,8 +26,8 @@ void failo_nuskaitymas(list<Studentas>& p, int n, vector<double>& laikas){
 }
 
 void isvedimas_failas(list<Studentas> lam, list<Studentas> fal, int n, vector<double>& laikas){
-    ofstream lf("Laimetojai" + to_string(n) + ".txt");
-    ofstream ff("Luzeriai" + to_string(n) + ".txt");
+    ofstream lf("LaimetojaiL1" + to_string(n) + ".txt");
+    ofstream ff("LuzeriaiL1" + to_string(n) + ".txt");
     auto start = system_clock::now();
     lf << setw(18) << left << "Vardas" << setw(18)  << left << "Pavarde" << setw(25) << left << "Galutinis (vidurkis)" << "\n";
     lf << "--------------------------------------------------------" << "\n";
@@ -46,4 +46,6 @@ void isvedimas_failas(list<Studentas> lam, list<Studentas> fal, int n, vector<do
     auto end  = system_clock::now();
     duration<double> diff = end - start;
     laikas.at(3) = diff.count();
+    lam.clear();
+    fal.clear();
 }
