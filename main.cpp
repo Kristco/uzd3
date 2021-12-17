@@ -7,11 +7,11 @@
 int main()
 {
     int kartai = 2;
-    int studentu_kiekis = 1000;
+    int studentu_kiekis = 100000;
     vector <double> laikas;
     laikas.resize(4);
-    studentu_kiekis = 1000;
     vector<Studentas_V> v; vector<Studentas_V> laim; vector<Studentas_V> fail;
+    cout << "------------------------------------------------------------------------------------- \n";
     for(int x = 0; x < kartai; x++) {
         generavimas_vector(studentu_kiekis, laikas);
         failo_nuskaitymas_vector(v, studentu_kiekis, laikas);
@@ -20,11 +20,11 @@ int main()
         cout << studentu_kiekis << " nuskaitymas i vektoriu naudojant struktura uztruko " << laikas.at(1) << " sekundziu \n";
         cout << studentu_kiekis << " rusiavimas i 2 skirtingus grupes naudojant strukturas uztruko " << laikas.at(2) << " sekundziu \n";
         cout << studentu_kiekis << " isvedimas su strukturomis uztruko " << laikas.at(3) << " sekundziu \n";
+        cout << "------------------------------------------------------------------------------------- \n";
         studentu_kiekis *= 10;
     }
     v.clear(); laim.clear(); fail.clear();
-    cout << "\n\n";
-    studentu_kiekis = 1000;
+    studentu_kiekis = 100000;
     vector<Studentas> v_klases; vector<Studentas> laim_klases; vector<Studentas> fail_klases;
     for (int x = 0; x < kartai; x++) {
         klases_failo_nuskaitymas(v_klases, studentu_kiekis, laikas);
@@ -33,6 +33,7 @@ int main()
         cout << studentu_kiekis << " nuskaitymas i vektoriu naudojant klases uztruko " << laikas.at(0) << " sekundziu \n";
         cout << studentu_kiekis << " rusiavimas i 2 skirtingus grupes naudojant klases uztruko " << laikas.at(1) << " sekundziu \n";
         cout << studentu_kiekis << " isvedimas su klasemis uztruko " << laikas.at(2) << " sekundziu \n";
+        cout << "------------------------------------------------------------------------------------- \n";
         v_klases.clear(); laim_klases.clear(); fail_klases.clear();
         studentu_kiekis *= 10;
     }
