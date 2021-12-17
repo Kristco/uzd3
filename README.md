@@ -9,6 +9,7 @@ Sistemos parametrai:
 - SSD - Read/Write 3500/3000 MB/s
 
 Žiūrint į programos greitį matome, kad greičiai beveik nesiskiria nuo paprastos klasės, be destruktorių, kopijavimo ir swap, tačiau rūšiavimo laikas yra beveik 2 kartus ilgesnis:
+
 ![image](https://user-images.githubusercontent.com/69794082/146570518-6b163134-e9fc-4e5e-9a65-fa970accaaac.png)
 
 
