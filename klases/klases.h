@@ -6,7 +6,9 @@
 using namespace std;
 using namespace chrono;
 
-
+/**
+ * Abstrakti klasė Zmogus
+ */
 class Zmogus {
 
 protected:
@@ -22,16 +24,30 @@ public:
 };
 
 
+/**
+ * Klasė Studentas, kuri yra Zmogaus išvestinė klasė
+ */
 class Studentas : public Zmogus {
-
+    /**
+    * Informacija apie studentą
+    * \param vardas Studento indentifikuojamas vardas
+    * \param pavarde Studento indentifikuojama pavardė
+    * \param nd Studento namų darbų rezultatai saugomi vectoriuje
+    * \param egz Studento egzamino rezultatas
+    */
 private:
     string vardas, pavarde;
     vector<double> nd;
     double egz;
 
 public:
+    /**
+     * Konstruktorius
+     */
     Studentas() : egz(0) {};
-
+    /**
+     * Destruktorius
+     */
     ~Studentas() = default;
     Studentas(const Studentas &laik)
     {
@@ -56,6 +72,9 @@ public:
     string getVardas() const {return vardas;}
     string getPavarde() const {return pavarde;}
     double getGalut();
+    /**
+     * Funkcija, kuri nuskaito studentų informaciją iš failo
+     */
     void readStud(ifstream&);
 
 };

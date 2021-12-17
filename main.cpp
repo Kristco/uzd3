@@ -4,6 +4,10 @@
 
 int main()
 {
+    /**
+     * \param kartai Kiek kartų vykdyti for ciklą, kuris generuoja naujus failus ir skaičiuoja greitį
+     * \param studentu_kiekis Pradinis studentų kiekis, po to bus dauginamas iš kartų * 10
+     */
     int kartai = 2;
     int studentu_kiekis = 100000;
     vector <double> laikas;
