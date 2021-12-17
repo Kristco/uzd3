@@ -10,8 +10,13 @@ Sistemos parametrai:
 
 Žiūrint į programos greitį matome, kad greičiai beveik nesiskiria nuo paprastos klasės, be destruktorių, kopijavimo ir swap, tačiau rūšiavimo laikas yra beveik 2 kartus ilgesnis:
 
+Atnaujinta klasė:
+
 ![image](https://user-images.githubusercontent.com/69794082/146570518-6b163134-e9fc-4e5e-9a65-fa970accaaac.png)
 
+Sena klasė:
+
+![image](https://user-images.githubusercontent.com/69794082/146570714-75d8b362-fdf4-4d18-95c2-e57a44a3ab29.png)
 
 
 
