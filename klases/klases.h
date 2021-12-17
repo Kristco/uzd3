@@ -6,7 +6,23 @@
 using namespace std;
 using namespace chrono;
 
-class Studentas {
+
+class Zmogus {
+
+protected:
+    string vardas;
+    string pavarde;
+
+public:
+    Zmogus() {};
+    ~Zmogus() {};
+    virtual string getVardas() const = 0;
+    virtual string getPavarde() const = 0;
+
+};
+
+
+class Studentas : public Zmogus {
 
 private:
     string vardas, pavarde;
