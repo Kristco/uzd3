@@ -1,1 +1,0 @@
-/usr/bin/c++.exe -g -Wl,--enable-auto-import CMakeFiles/uzd1.dir/main.cpp.o CMakeFiles/uzd1.dir/klases/klases.cpp.o CMakeFiles/uzd1.dir/klases/klases_duomenu_apdorojimas.cpp.o -o uzd1.exe -Wl,--out-implib,libuzd1.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
