@@ -20,6 +20,8 @@ Siekiant įsidiegti šia programą reikia:
 Komentarai:
 Doxygen aprašą sėkmingai pavyko padaryti, reikėjo truputi ilgiau nei norėjau gilintis apie Doxygen.
 
+## Versijos
+
 - [V1.1](https://github.com/Kristco/uzd1/releases/tag/1.1.1) - Pirmoji versija. Palyginta klasės ir struktūros vykdymo greičiai ir išbandyti optimizavimo lygiai. Klasė nuo struktūros greičiu daug nesiskiria, klasės skirstymas yra dvigubai ilgesnis. Visi optimizavimo lygiai truputi pagreitina veikima ir dvigubai sutrumpina skirstyma ir klasėms, ir struktūroms.
 - [V1.2](https://github.com/Kristco/uzd1/releases/tag/1.2.1) - Antroji versija. Atnaujinta klasė. Skirstymas beveik dvigubai suletėjo.
 - [V1.5](https://github.com/Kristco/uzd1/releases/tag/1.5.1) - Trečioji versija. Sukurta abstrakti klasė ir naudojama jos išvestinė klasė.
