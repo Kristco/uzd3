@@ -10,6 +10,8 @@ Sistemos parametrai:
 
 5 kartų greičio vidurkiai:
 
+![image](https://user-images.githubusercontent.com/69794082/146548879-7a74e072-311a-43f8-8afa-e365f85b8b4e.png)
+
 Skirstimas į grupes užtrunka beveik 2x ilgiau naudojant klases negu su struktūromis, kitos užduotis veikia panašiu greičiu arba klasėse truputi greičiau
 
 
