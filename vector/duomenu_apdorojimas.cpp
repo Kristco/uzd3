@@ -1,6 +1,39 @@
-#include "vector/strukturos_vector.h"
-#include "vector/failu_tvarkymas_vector.h"
-#include "vector/skaiciavimai_vector.h"
+#include "vector/strukturos.h"
+#include "vector/duomenu_apdorojimas.h"
+#include "vector/skaiciavimai.h"
+
+void rusiavimas_vector(vector<Studentas_V> p, vector<Studentas_V>& lam, vector<Studentas_V>& fal, int kiekis, vector<double>& laikas)
+{
+    auto start = system_clock::now();
+    for(int y = 1; y <= kiekis; y++)
+    {
+        if (p.at(y).galut < 5)  fal.push_back(p.at(y));
+        else    lam.push_back(p.at(y));
+    }
+    auto end  = system_clock::now();
+    duration<double> diff = end - start;
+    laikas.at(2) = diff.count();
+}
+
+void generavimas_vector(int kiekis, vector<double>& laikas)
+{
+    string vardas = "Vardas", pavarde = "Pavarde";
+    ofstream rf("Studentai" + to_string(kiekis) + ".txt");
+    auto start = system_clock::now();
+    rf << setw(18) << left << "Vardas" << setw(18) << "Pavarde";
+    for(int x = 1; x <= 7; x++)  rf << setw(8) << left << "ND" + to_string(x);
+    rf << "Egz." << "\n";
+    for(int x = 1; x <= kiekis; x++)
+    {
+        rf << setw(18) << left << "Vardas" + to_string(x) << setw(18) << "Pavarde" + to_string(x);
+        for(int y = 0; y < 7; y++)  rf << setw(8) << left << gen();
+        rf << gen() << "\n";
+    }
+    rf.close();
+    auto end  = system_clock::now();
+    duration<double> diff = end - start;
+    laikas.at(0) = diff.count();
+}
 
 void failo_nuskaitymas_vector(vector<Studentas_V>& p, int n, vector<double>& laikas){
     string failas;
@@ -25,8 +58,8 @@ void failo_nuskaitymas_vector(vector<Studentas_V>& p, int n, vector<double>& lai
 }
 
 void isvedimas_failas_vector(vector<Studentas_V> lam, vector<Studentas_V> fal, int n, vector<double>& laikas){
-    ofstream lf("LaimetojaiV1" + to_string(n) + ".txt");
-    ofstream ff("LuzeriaiV1" + to_string(n) + ".txt");
+    ofstream lf("Laimetojai" + to_string(n) + ".txt");
+    ofstream ff("Luzeriai" + to_string(n) + ".txt");
     auto start = system_clock::now();
     lf << setw(18) << left << "Vardas" << setw(18)  << left << "Pavarde" << setw(25) << left << "Galutinis (vidurkis)" << "\n";
     lf << "--------------------------------------------------------" << "\n";
@@ -34,7 +67,7 @@ void isvedimas_failas_vector(vector<Studentas_V> lam, vector<Studentas_V> fal, i
     ff << "--------------------------------------------------------" << "\n";
     for(int x = 0; x < lam.size(); x++)
     {
-        lf << setw(18) << lam.at(x).vardas << setw(18) << lam.at(x).pavarde;
+        lf  << lam.at(x).vardas << setw(18) << lam.at(x).pavarde;
         lf << fixed << setprecision(2) << setw(25) << lam.at(x).galut << "\n";
     }
     for(int x = 0; x < fal.size(); x++)

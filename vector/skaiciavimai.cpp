@@ -1,5 +1,5 @@
-#include "vector/strukturos_vector.h"
-#include "vector/skaiciavimai_vector.h"
+#include "vector/strukturos.h"
+#include "vector/skaiciavimai.h"
 
 
 random_device rndv;
@@ -7,7 +7,7 @@ mt19937 mersenne_engines {rndv()};
 uniform_int_distribution<int> distv {1, 10};
 
 
-int gen_vector() {
+int gen() {
     return distv(mersenne_engines);
 }
 
