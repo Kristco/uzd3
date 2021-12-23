@@ -4,8 +4,8 @@
 
 int main()
 {
-    int kartai = 2;
-    int studentu_kiekis = 100000;
+    int kartai = 3;
+    int studentu_kiekis = 10000;
     vector <double> laikas;
     laikas.resize(4);
     cout << "------------------------------------------------------------------------------------- \n";
