@@ -4,7 +4,7 @@
 
 Naudojant Inno Setup Compiler yra sukuriamas installeris.
 
-Kad suinstaliuoti programą reikia pasileisti setup_3V.exe ir programa bus suinstaliuota. Ją išinstaliuoti yra galima per valdymo skydą per windows.
+Kad suinstaliuoti programą užtenka parsisiųsti setup_3V.exe ir ją paleisti. Programa bus suinstaliuota. Ją išinstaliuoti yra galima per valdymo skydą.
 
 
 Komentarai:
